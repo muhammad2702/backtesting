@@ -1,0 +1,6 @@
+twelvedata
+pandas
+numpy
+joblib
+streamlit
+matplotlib
