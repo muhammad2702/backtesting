@@ -1,8 +1,8 @@
 setuptools
 twelvedata==1.2.20
-pandas
-numpy
-joblib
+pandas==2.0.3
+numpy==1.23.5
+joblib==1.2.0
 streamlit
 matplotlib
 scikit-learn==1.2.2
