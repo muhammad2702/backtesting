@@ -524,15 +524,15 @@ if st.button("Run Backtest"):
             stop_loss_trades = [trade for trade in trades if trade['Action'].startswith('Sell (Stop-Loss)')]
             plt.show()
             
-            printsignalsM = np.where(signals['MAB_Signal'] == 1, "Buy",  np.where(signals['MAB_Signal']==-1 , "Sell" , 0))
+            printsignalsM = np.where(signals['MAB_Signal'] == 1, "Buy",  np.where(signals['MAB_Signal']==-1 , "Sell" , "Neutral"))
             #printsignalsMd = pd.concat( signals['date'] ,  printsignalsM  ,axis = 1)
-            printsignalsS = np.where(signals['SSG_Signal'] == 1, "Buy", np.where(signals['SSG_Signal'] == -1, "Sell",  0))
+            printsignalsS = np.where(signals['SSG_Signal'] == 1, "Buy", np.where(signals['SSG_Signal'] == -1, "Sell",   "Neutral"))
             #printsignalsSd = pd.concat( signals['date'] ,  printsignalsS  ,axis = 1)
 
-            printsignalsH = np.where(signals['HPattern_Signal'] == 1, "Buy", np.where(signals['HPattern_Signal'] == -1, "Sell" , 0 ))
+            printsignalsH = np.where(signals['HPattern_Signal'] == 1, "Buy", np.where(signals['HPattern_Signal'] == -1, "Sell" ,  "Neutral" ))
             #printsignalsHd = pd.concat( signals['date'] ,  printsignalsH  ,axis = 1)
 
-            printsignalsT = np.where(signals['Trip5_Signal'] == 1, "Buy", np.where(signals['Trip5_Signal'] == -1, "Sell" , 0 ))
+            printsignalsT = np.where(signals['Trip5_Signal'] == 1, "Buy", np.where(signals['Trip5_Signal'] == -1, "Sell" ,  "Neutral" ))
             #printsignalsTd = pd.concat( signals['date'] ,  printsignalsT  ,axis = 1)
 
             signal_series = {
